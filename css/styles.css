@@ -106,8 +106,11 @@ body {
     }
 
     .card {
-        display: inline-flex;
-        
+        display: inline-flex;   
+    }
+
+    .avatar {
+        width: 20%;
     }
 }
 
