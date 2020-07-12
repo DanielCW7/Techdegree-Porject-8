@@ -1,5 +1,5 @@
 let employees = [];
-const URL = `https://randomuser.me/api/?results=12&inc=name, picture,email, location, phone, dob &noinfo &nat=US`;
+const URL = `https://randomuser.me/api/?results=12&inc=name,picture,email,location,phone,dob&noinfo&nat=US`;
 const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
@@ -11,7 +11,7 @@ fetch(URL)
     .then(res => res.json())
     .then(res => res.results)
     .then(displayEmployees)
-    .then(err => console.log(err))
+    .then(err => console.log(err));
 
 function displayEmployees(employeeData) {
     employees = employeeData;
@@ -47,8 +47,8 @@ function displayModal(index) {
                                     <p class="address">${city}</p>
                                     <hr />
                                     <p>${phone}</p>
-                                    <p class="address">${street}, ${state} ${postcode}</p>
-                                    <p>Birthday:${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+                                    <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
+                                    <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
                             </div>`;
     overlay.classList.remove("hidden");
     modalContainer.innerHTML = modalHTML;
@@ -71,15 +71,3 @@ modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
 });
     
-
-
-
-
-
-
-// Use fetch to get and display 12 random users from The Random User Generator API
-// Using photos and information that the API provides, you’ll display 12 users, along with some basic information:
-// - Image
-// - First and Last Name
-// - Email
-// - City
