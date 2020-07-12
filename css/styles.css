@@ -35,6 +35,8 @@ body {
     right: 15px;
     top: 5px;
     cursor: pointer;
+    border-style: none;
+    background: inherit;
 }
 
 .hidden {
@@ -95,7 +97,6 @@ body {
 @media (min-width: 1024px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
-
     }
 
     #header {
