@@ -69,7 +69,7 @@ body {
 }
 
 .avatar {
-    margin: 10px auto 10px 10px;
+    margin: 10px 10px 10px auto;
     border-radius: 50%;
 }
 
